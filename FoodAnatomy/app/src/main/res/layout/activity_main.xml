@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/ivFood"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivFood"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floatingMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        fab:fab_addButtonColorNormal="@color/design_default_color_primary"
+        fab:fab_addButtonColorPressed="@color/white"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/design_default_color_primary"
+            fab:fab_colorPressed="@color/white"
+            android:src="@drawable/ic_camera"
+            android:onClick="onClickCamera"
+            fab:fab_title="Camera" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gallery"
+            fab:fab_colorNormal="@color/design_default_color_primary"
+            fab:fab_colorPressed="@color/white"
+            android:onClick="onClickGallery"
+            fab:fab_title="Gallery" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>
